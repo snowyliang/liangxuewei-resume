@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120">
+  <!-- 叶纹底纹：浅深两色叶片 + 圆点点缀，铺在 hero 深绿底色上 -->
+  <g fill="none" stroke="#6fb889" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M22 34c9-11 25-10 33 0-8 11-24 10-33 0z" />
+    <path d="M25 35c6-7 16-7 22 0" opacity="0.55" />
+    <path d="M92 88c9-11 25-10 33 0-8 11-24 10-33 0z" />
+    <path d="M95 89c6-7 16-7 22 0" opacity="0.55" />
+  </g>
+  <g fill="#8fd0a8" opacity="0.8">
+    <circle cx="78" cy="26" r="2.4" />
+    <circle cx="34" cy="82" r="2.4" />
+    <circle cx="108" cy="48" r="1.8" />
+    <circle cx="12" cy="58" r="1.8" />
+  </g>
+</svg>
