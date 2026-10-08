@@ -301,11 +301,12 @@ section{ scroll-margin-top:24px; }
 .task-stat{ font-size:15px; line-height:1.8; color:var(--text-body); margin-bottom:16px; }
 .task-stat b{ color:var(--primary-active); }
 .task-framework-lead{ font-size:14px; font-weight:700; color:var(--text-body); margin-bottom:14px; }
-.task-pillars{ display:flex; gap:12px; flex-wrap:wrap; }
+.task-pillars{ display:flex; gap:12px; flex-wrap:wrap; margin-bottom:18px; }
 .task-pillar{
   display:flex; align-items:center; gap:8px;
   padding:9px 18px 9px 9px;
-  background:var(--bg-mint);
+  background:#fff;
+  border:1.5px solid var(--border);
   border-radius:var(--r-pill);
   font-weight:700; color:var(--text); font-size:14px;
 }
@@ -318,6 +319,13 @@ section{ scroll-margin-top:24px; }
 }
 .task-pillar-icon .icon{ width:14px; height:14px; }
 .task-slide-desc{ font-size:14px; color:var(--text-body); margin-bottom:16px; line-height:1.8; }
+.case-sub{
+  font-size:15px; font-weight:800; color:var(--text);
+  margin:24px 0 10px; padding-left:10px;
+  border-left:3px solid var(--primary);
+}
+.case-sub:first-of-type{ margin-top:6px; }
+.case-sub + .task-slide-desc{ margin-bottom:12px; }
 .task-subsection{ margin-bottom:22px; }
 .task-subsection:last-child{ margin-bottom:0; }
 .task-slide-quote{ font-size:14px; font-weight:700; color:var(--primary-active); margin-bottom:18px; }
