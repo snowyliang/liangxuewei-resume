@@ -350,6 +350,46 @@ section{ scroll-margin-top:24px; }
   transition:all 0.2s var(--ease);
 }
 .task-dot.active{ width:22px; border-radius:5px; background:var(--primary); }
+/* ===== 作品链接行（剧本 PDF + 剧情展示视频） ===== */
+.task-links{ display:flex; flex-wrap:wrap; gap:10px; margin-top:16px; }
+.task-video-link{
+  display:inline-flex; align-items:center; gap:6px;
+  font-size:13px; font-weight:800;
+  color:#fff;
+  background:var(--primary);
+  padding:9px 18px;
+  border-radius:var(--r-pill);
+  box-shadow:0 3px 0 0 var(--primary-active);
+  white-space:nowrap;
+  flex-shrink:0;
+  transition:transform 0.2s var(--ease), box-shadow 0.2s var(--ease), background 0.2s var(--ease);
+}
+.task-video-link:hover{ background:var(--primary-hover); transform:translateY(-1px); box-shadow:0 4px 0 0 var(--primary-active); }
+.task-video-link:active{ transform:translateY(1px); box-shadow:0 1px 0 0 var(--primary-active); }
+.task-video-link .icon{ width:14px; height:14px; }
+.task-doc-link{
+  display:inline-flex; align-items:center; gap:6px;
+  font-size:13px; font-weight:800;
+  color:var(--primary-active);
+  background:var(--bg-mint);
+  border:1.5px solid var(--primary);
+  padding:9px 18px;
+  border-radius:var(--r-pill);
+  white-space:nowrap;
+  flex-shrink:0;
+  transition:transform 0.2s var(--ease), background 0.2s var(--ease);
+}
+.task-doc-link:hover{ background:var(--primary-bg); transform:translateY(-1px); }
+.task-doc-link:active{ transform:translateY(1px); }
+.task-doc-link .icon{ width:14px; height:14px; }
+.case-img{
+  display:block;
+  width:100%;
+  max-width:480px;
+  border-radius:var(--r-sm);
+  border:2px solid var(--border);
+  margin:14px 0 2px;
+}
 /* ===== 作品集：模块化展示 ===== */
 .portfolio-module{ margin-bottom:32px; }
 .portfolio-module:last-child{ margin-bottom:0; }
