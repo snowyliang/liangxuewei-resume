@@ -505,5 +505,29 @@
   </footer>
 </div>
 <script src="script.js"></script>
+<script>
+// ===== 部署更新检测：发现新版本时右下角提示刷新（不强制打断阅读） =====
+(function(){
+  var BUILD_ID = '202610082155';
+  function checkUpdate(){
+    fetch(location.pathname + '?_=' + Date.now(), { cache:'no-store' })
+      .then(function(res){ return res.text(); })
+      .then(function(html){
+        var m = html.match(/BUILD_ID\s*=\s*'([^']+)'/);
+        if (m && m[1] !== BUILD_ID && !document.getElementById('updateToast')){
+          var t = document.createElement('div');
+          t.id = 'updateToast';
+          t.textContent = '发现新版本 · 点击刷新';
+          t.style.cssText = 'position:fixed;right:20px;bottom:20px;z-index:999;background:#11a89b;color:#fff;padding:11px 20px;border-radius:50px;font:700 13px/1 system-ui,sans-serif;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.25)';
+          t.onclick = function(){ location.reload(); };
+          document.body.appendChild(t);
+        }
+      })
+      .catch(function(){});
+  }
+  setTimeout(checkUpdate, 20000);
+  setInterval(checkUpdate, 60000);
+})();
+</script>
 </body>
 </html>
